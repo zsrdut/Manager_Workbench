@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+public/
+.vercel/
+.env
+.env.*
+!.env.example
+_shots/
+.preview/
+evidence/
+control/
+*.log
