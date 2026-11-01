@@ -2,23 +2,38 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>客户经理工作台｜演示基线</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23097080'/%3E%3Cpath d='M12 34V16h8v18m8 0V10h8v24' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<title>客户经理工作台｜客户跟进提醒</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23246f9f'/%3E%3Cpath d='M12 34V16h8v18m8 0V10h8v24' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
 <style>
-:root{--paper:#f3f6f8;--ink:#19333d;--muted:#5d7079;--line:#d7e2e6;--brand:#097080;--wash:#e6f4f5}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 'PingFang SC','Microsoft YaHei',sans-serif}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #de8a32;outline-offset:3px}header{background:#fff;border-bottom:1px solid var(--line);padding:18px 22px;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-size:20px;font-weight:700}.brand small{display:block;font-size:14px;color:var(--muted);font-weight:400}.badge{font-size:14px;padding:4px 10px;background:var(--wash);border:1px solid #c1dfe3;border-radius:4px}main{max-width:1220px;margin:auto;padding:24px 18px 36px}h1{font-size:28px;margin:0 0 4px;line-height:1.4}h2{font-size:22px;margin:0}h3{font-size:17px;margin:0 0 8px}p{margin:8px 0}.muted{color:var(--muted)}.intro{margin-bottom:24px}.layout{display:grid;gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:8px;min-width:0}.panel-title{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.filters{padding:16px 20px;display:flex;gap:12px;flex-wrap:wrap;background:#fafcfd}.field{flex:1;min-width:180px}.field label{display:block;font-size:14px;margin-bottom:5px;color:var(--muted)}input,select{width:100%;min-height:44px;border:1px solid #a8bcc5;border-radius:5px;background:white;padding:8px 10px}ul{margin:0;padding:0;list-style:none}.customer{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);padding:17px 20px;background:white;color:var(--ink);min-height:90px}.customer:hover{background:#f3f9fa}.customer[aria-current="true"]{background:var(--wash);box-shadow:inset 4px 0 var(--brand)}.customer strong{font-size:17px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.customer .sub{font-size:14px;color:var(--muted);margin-top:5px}.status{font-size:14px;color:var(--brand);font-weight:500}.empty{padding:32px 20px}.detail{padding:22px}.detail-top{margin-bottom:24px}.avatar{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;background:var(--wash);border-radius:50%;color:var(--brand);font-size:20px;margin-bottom:12px}.facts{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0}.facts div{border-bottom:1px solid var(--line);padding-bottom:10px}dt{font-size:14px;color:var(--muted)}dd{margin:3px 0 0;font-weight:600}.note{background:#f4f8fa;padding:16px;border-radius:5px}.outline{border:1px solid #a8bcc5;background:white;color:var(--ink);border-radius:5px;padding:8px 14px;min-height:44px}footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:24px;padding-top:16px}.version{font-family:ui-monospace,monospace;font-size:14px}.mobile-back{margin-bottom:16px}[hidden]{display:none!important}@media(min-width:768px){main{padding:32px 24px 40px}.layout{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.facts{grid-template-columns:1fr 1fr}.mobile-back{display:none}.detail{padding:26px}.intro{display:flex;justify-content:space-between;align-items:end;gap:20px}}@media(max-width:767px){.layout[data-detail="true"] #directory{display:none}.layout[data-detail="false"] #detail-panel{display:none}}
+:root{--paper:#e4eff9;--ink:#19333d;--muted:#5d7079;--line:#cfe0ee;--brand:#246f9f;--wash:#d3e5f5;--danger:#a8331f}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 'PingFang SC','Microsoft YaHei',sans-serif}button,input,select,textarea{font:inherit}button,a,input,select,textarea{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #de8a32;outline-offset:3px}header{background:#fff;border-bottom:1px solid var(--line);padding:18px 22px;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-size:20px;font-weight:700}.brand small{display:block;font-size:14px;color:var(--muted);font-weight:400}.badge{font-size:14px;padding:4px 10px;background:var(--wash);border:1px solid #b9d3e8;border-radius:4px}main{max-width:1220px;margin:auto;padding:24px 18px 36px}h1{font-size:28px;margin:0 0 4px;line-height:1.4}h2{font-size:22px;margin:0}h3{font-size:17px;margin:0 0 8px}h4{font-size:16px;margin:0 0 8px}p{margin:8px 0}.muted{color:var(--muted)}.intro{margin-bottom:24px}.layout{display:grid;gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:8px;min-width:0}.panel-title{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.filters{padding:16px 20px;display:flex;gap:12px;flex-wrap:wrap;background:#f4f9fd}.field{flex:1;min-width:180px}.field label{display:block;font-size:14px;margin-bottom:5px;color:var(--muted)}input,select,textarea{width:100%;min-height:44px;border:1px solid #a8bcc5;border-radius:5px;background:white;padding:8px 10px}textarea{min-height:84px;resize:vertical}ul{margin:0;padding:0;list-style:none}.customer{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);padding:17px 20px;background:white;color:var(--ink);min-height:90px}.customer:hover{background:#f4f9fd}.customer[aria-current="true"]{background:var(--wash);box-shadow:inset 4px 0 var(--brand)}.customer strong{font-size:17px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.customer .sub{font-size:14px;color:var(--muted);margin-top:5px}.status{font-size:14px;color:var(--brand);font-weight:500}.empty{padding:32px 20px}.detail{padding:22px}.detail-top{margin-bottom:24px}.avatar{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;background:var(--wash);border-radius:50%;color:var(--brand);font-size:20px;margin-bottom:12px}.facts{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0}.facts div{border-bottom:1px solid var(--line);padding-bottom:10px}dt{font-size:14px;color:var(--muted)}dd{margin:3px 0 0;font-weight:600}.note{background:#f4f9fd;padding:16px;border-radius:5px}.outline{border:1px solid #a8bcc5;background:white;color:var(--ink);border-radius:5px;padding:8px 14px;min-height:44px}.primary{border:1px solid var(--brand);background:var(--brand);color:white;border-radius:5px;padding:8px 16px;min-height:44px}.danger{border:1px solid var(--danger);background:white;color:var(--danger);border-radius:5px;padding:8px 14px;min-height:44px}.workbench{margin-bottom:20px}.workbench-body{padding:18px 20px}.storage-note{background:#f4f9fd;border:1px solid var(--line);border-radius:5px;padding:10px 12px;font-size:14px;color:var(--muted)}.banner{margin:14px 0;padding:12px 14px;border:1px solid #c4553f;border-left:5px solid #c4553f;background:#fff3ef;border-radius:5px}.banner p{margin:0 0 8px}.bucket{margin-top:18px}.bucket-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:10px}.bucket-head h3{margin:0}.count{font-size:14px;color:var(--muted)}.record{border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-bottom:10px;background:white;min-width:0}.record-text{font-weight:600;margin:0;overflow-wrap:anywhere;white-space:pre-wrap}.record-meta{font-size:14px;color:var(--muted);margin:6px 0 0;overflow-wrap:anywhere}.record-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}.record-tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.tag{font-size:13px;padding:2px 8px;border-radius:999px;border:1px solid var(--brand);color:var(--brand);background:#eaf4fc;white-space:nowrap}.tag-overdue{border-color:#c4553f;color:#8f2f1e;background:#fff0eb}.tag-done{border-color:#4c7a52;color:#2f5b36;background:#eef7ef}.record-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.record-empty{color:var(--muted);font-size:15px;padding:10px 0}.followup{margin-top:28px;border-top:1px solid var(--line);padding-top:22px}.followup-form{display:grid;grid-template-columns:1fr;gap:14px;margin:12px 0 20px}.form-field{min-width:0}.form-field label{display:block;font-size:14px;color:var(--muted);margin-bottom:5px}.form-field input[type="date"]{max-width:260px}.form-actions{display:flex;gap:10px;flex-wrap:wrap}.form-feedback{margin:0;font-size:15px}.form-feedback.error{color:#8f2f1e}.form-feedback.ok{color:#2f5b36}.followup-group{margin-top:18px}.delete-warning{background:#fff0eb;border:1px solid #c4553f;border-radius:5px;padding:10px 12px}.edit-form{display:grid;grid-template-columns:1fr;gap:12px}.detail-error{background:#fff3ef;border:1px solid #c4553f;border-radius:5px;padding:10px 12px}.storage-disabled{background:#f4f9fd;border:1px dashed #a8bcc5;border-radius:5px;padding:10px 12px;color:var(--muted)}footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:24px;padding-top:16px}.version{font-family:ui-monospace,monospace;font-size:14px}.mobile-back{margin-bottom:16px}[hidden]{display:none!important}@media(min-width:768px){main{padding:32px 24px 40px}.layout{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.facts{grid-template-columns:1fr 1fr}.mobile-back{display:none}.detail{padding:26px}.intro{display:flex;justify-content:space-between;align-items:end;gap:20px}}@media(max-width:767px){.layout[data-detail="true"] #directory{display:none}.layout[data-detail="false"] #detail-panel{display:none}}
 </style>
 </head>
 <body>
 <header><div class="brand">客户经理工作台<small>Manager Workbench</small></div><span class="badge">虚构数据 · 演示环境</span></header>
 <main>
-<section class="intro"><div><h1>我的客户</h1><p class="muted">查看客户档案，快速了解服务背景。</p></div><div class="version">基线 v0.1.0 · <span id="commit">__BUILD_COMMIT__</span></div></section>
+<section class="intro"><div><h1>我的客户</h1><p class="muted">查看客户档案，记录并跟进带日期的客户事项。</p></div><div class="version">v0.2.0 · <span id="commit">__BUILD_COMMIT__</span></div></section>
+<section class="panel workbench" id="workbench" aria-labelledby="workbench-title">
+<div class="panel-title"><h2 id="workbench-title">我的工作台</h2><span class="badge" id="today-badge">今天 <span id="today-date"></span></span></div>
+<div class="workbench-body">
+<p class="storage-note">记录仅保存在同一浏览器同一 origin（协议 + 主机 + 端口）；刷新或重开页面仍保留。换设备、浏览器或访问地址不共享；清除浏览器数据后会丢失。全部为虚构演示数据，不接真实客户或通知。</p>
+<div class="banner" id="storage-banner" role="alert" hidden></div>
+<section class="bucket" id="overdue-section" aria-labelledby="overdue-title">
+<div class="bucket-head"><h3 id="overdue-title">已逾期</h3><span class="count" id="overdue-count"></span></div>
+<ul id="overdue-list"></ul>
+</section>
+<section class="bucket" id="today-section" aria-labelledby="today-title">
+<div class="bucket-head"><h3 id="today-title">今日待跟进</h3><span class="count" id="today-count"></span></div>
+<ul id="today-list"></ul>
+</section>
+</div>
+</section>
 <div class="layout" id="layout" data-detail="false">
 <section class="panel" id="directory" aria-label="客户列表"><div class="panel-title"><h2>客户列表</h2><span class="muted" id="count" aria-live="polite"></span></div>
 <div class="filters"><div class="field"><label for="search">搜索客户</label><input id="search" type="search" placeholder="客户名称或演示编号" autocomplete="off"></div><div class="field"><label for="segment">客户类型</label><select id="segment"><option value="all">全部类型</option><option value="企业客户">企业客户</option><option value="个人客户">个人客户</option></select></div></div>
 <ul id="customer-list"></ul><div class="empty" id="empty" hidden><h3>没有匹配的客户</h3><p class="muted">试试其他关键词或清除筛选条件。</p><button class="outline" id="reset">清除筛选</button></div></section>
-<section class="panel" id="detail-panel" aria-label="客户详情"><div class="panel-title"><h2>客户详情</h2><span class="badge">只读档案</span></div><div class="detail" id="detail"></div></section>
+<section class="panel" id="detail-panel" aria-label="客户详情"><div class="panel-title"><h2>客户详情</h2><span class="badge">虚构档案</span></div><div class="detail" id="detail"></div></section>
 </div>
-<footer><p><b>演示基线：</b>当前仅提供客户列表与详情，尚未实现客户跟进提醒。</p><p>全部客户均为虚构样例，不接银行系统，不含真实客户资料。后续跟进记录仅保存在当前浏览器；换设备、换浏览器不共享，清除浏览器数据后会丢失。当前版本不写入跟进记录。</p></footer>
+<footer><p><b>演示版本：</b>支持在客户详情新增、编辑、完成、撤销与删除跟进事项，并在工作台查看今日与逾期事项。</p><p>全部客户均为虚构样例，不接银行系统，不含真实客户资料。跟进记录仅保存在当前浏览器当前 origin；换设备、换浏览器、换访问地址不共享，清除浏览器数据后会丢失。不接 SQLite、服务端数据库、SSO、短信或飞书通知。</p></footer>
 </main>
 <script>
 'use strict';
@@ -30,15 +45,465 @@ const CUSTOMERS=Object.freeze([
 {id:'demo-005',name:'演示客户戊',segment:'企业客户',industry:'服务业（样例）',stage:'资料了解',owner:'演示客户经理',summary:'希望了解业务材料准备与办理步骤。',note:'后续沟通聚焦资料清单，不包含授信或风控判断。'},
 {id:'demo-006',name:'演示客户己',segment:'企业客户',industry:'物流业（样例）',stage:'持续服务',owner:'演示客户经理',summary:'需要清晰的日常服务沟通渠道。',note:'全部内容为演示样例，无实际业务记录。'}
 ]);
+const CUSTOMER_IDS=new Set(CUSTOMERS.map(c=>c.id));
+const STORAGE_KEY='manager-workbench.followups.v1';
+const STORAGE_VERSION=1;
 const list=document.getElementById('customer-list');
 const search=document.getElementById('search');
 const segment=document.getElementById('segment');
 let selectedId=CUSTOMERS[0].id;
+let records=[];
+let storageState='ok';
+let storageError='';
+let clearConfirming=false;
+let editingId=null;
+let confirmDeleteId=null;
+let detailError='';
+
 function element(tag,text,className){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;}
-function renderList(){const term=search.value.trim().toLowerCase();const items=CUSTOMERS.filter(c=>(segment.value==='all'||c.segment===segment.value)&&(c.name.toLowerCase().includes(term)||c.id.includes(term)));list.replaceChildren();document.getElementById('count').textContent=`${items.length} / ${CUSTOMERS.length} 位客户`;document.getElementById('empty').hidden=items.length>0;for(const c of items){const li=element('li');const btn=element('button',undefined,'customer');btn.type='button';btn.dataset.customerId=c.id;btn.setAttribute('aria-current',String(c.id===selectedId));btn.setAttribute('aria-label',`查看${c.name}的详情`);const row=element('span',undefined,'row');row.append(element('strong',c.name),element('span',c.stage,'status'));btn.append(row,element('div',`${c.id}　${c.segment}　${c.industry}`,'sub'));btn.addEventListener('click',()=>{location.hash=`customer/${c.id}`;});li.append(btn);list.append(li);}}
-function renderDetail(){const c=CUSTOMERS.find(c=>c.id===selectedId);const target=document.getElementById('detail');target.replaceChildren();if(!c){target.append(element('p','未找到该客户。'));return;}const back=element('button','返回客户列表','outline mobile-back');back.type='button';back.addEventListener('click',()=>{location.hash='customers';});const top=element('div',undefined,'detail-top');top.append(element('span',c.name.slice(-1),'avatar'),element('h2',c.name),element('p',`${c.id} · ${c.segment}`,'muted'));const facts=element('dl',undefined,'facts');for(const [label,value] of [['服务阶段',c.stage],['所属行业',c.industry],['客户经理',c.owner],['数据性质','虚构演示数据']]){const entry=element('div');entry.append(element('dt',label),element('dd',value));facts.append(entry);}const note=element('div',undefined,'note');note.append(element('h3','服务背景'),element('p',c.summary),element('p',c.note,'muted'));target.append(back,top,facts,note);}
-function route(){const m=location.hash.match(/^#customer\/(demo-\d{3})$/);const exists=m&&CUSTOMERS.some(c=>c.id===m[1]);if(exists)selectedId=m[1];document.getElementById('layout').dataset.detail=String(Boolean(exists));renderList();renderDetail();}
-search.addEventListener('input',renderList);segment.addEventListener('change',renderList);document.getElementById('reset').addEventListener('click',()=>{search.value='';segment.value='all';renderList();search.focus();});window.addEventListener('hashchange',route);route();
+function pad2(n){return String(n).padStart(2,'0');}
+function todayISO(now){const d=now||new Date();return `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;}
+function isValidDate(value){
+  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;
+  const parts=value.split('-').map(Number);
+  const year=parts[0],month=parts[1],day=parts[2];
+  if(year<1000)return false;
+  const d=new Date(year,month-1,day);
+  return d.getFullYear()===year&&d.getMonth()===month-1&&d.getDate()===day;
+}
+function classifyDate(date,today){if(date<today)return 'overdue';if(date===today)return 'today';return 'future';}
+function compareRecords(a,b){if(a.date!==b.date)return a.date<b.date?-1:1;if(a.createdAt!==b.createdAt)return a.createdAt-b.createdAt;return a.id<b.id?-1:a.id>b.id?1:0;}
+function daysBetween(from,to){const a=from.split('-').map(Number),b=to.split('-').map(Number);return Math.round((Date.UTC(b[0],b[1]-1,b[2])-Date.UTC(a[0],a[1]-1,a[2]))/86400000);}
+function normalizeText(value){return typeof value==='string'?value.trim():'';}
+function validateInput(date,text){const errors=[];if(!date)errors.push('请选择跟进日期。');else if(!isValidDate(date))errors.push('请输入合法日期（YYYY-MM-DD）。');if(!normalizeText(text))errors.push('请输入跟进事项。');return errors;}
+function makeId(){try{if(globalThis.crypto&&typeof globalThis.crypto.randomUUID==='function')return globalThis.crypto.randomUUID();}catch(_){/* fallback below */}return `followup-${Date.now()}-${Math.random().toString(36).slice(2,10)}`;}
+
+function validateStoredRecords(value){
+  if(!Array.isArray(value))return {ok:false,records:[]};
+  const seen=new Set();
+  const clean=[];
+  for(const record of value){
+    if(!record||typeof record!=='object'||Array.isArray(record))return {ok:false,records:[]};
+    if(typeof record.id!=='string'||!record.id.trim()||seen.has(record.id))return {ok:false,records:[]};
+    if(typeof record.customerId!=='string'||!CUSTOMER_IDS.has(record.customerId))return {ok:false,records:[]};
+    if(!isValidDate(record.date))return {ok:false,records:[]};
+    if(typeof record.text!=='string'||!record.text.trim())return {ok:false,records:[]};
+    if(record.status!=='open'&&record.status!=='done')return {ok:false,records:[]};
+    if(typeof record.createdAt!=='number'||!Number.isFinite(record.createdAt))return {ok:false,records:[]};
+    seen.add(record.id);
+    clean.push({id:record.id,customerId:record.customerId,date:record.date,text:record.text,status:record.status,createdAt:record.createdAt});
+  }
+  return {ok:true,records:clean};
+}
+function loadStorage(){
+  let raw;
+  try{raw=window.localStorage.getItem(STORAGE_KEY);}
+  catch(_){storageState='unavailable';storageError='无法使用浏览器本地存储，记录未加载，也无法保存。请检查浏览器隐私设置后重试。';records=[];return;}
+  if(raw===null||raw===undefined){storageState='ok';storageError='';records=[];return;}
+  let data;
+  try{data=JSON.parse(raw);}
+  catch(_){storageState='corrupt';storageError='本地记录无法读取，可能已损坏或不是有效 JSON。为避免覆盖，已暂停写入。';records=[];return;}
+  if(!data||typeof data!=='object'||Array.isArray(data)){storageState='corrupt';storageError='本地记录格式不正确，已暂停写入以避免覆盖。';records=[];return;}
+  if(data.version!==STORAGE_VERSION){storageState='version';storageError='本地记录来自更新或未知的版本，当前页面无法安全读取，已暂停写入。';records=[];return;}
+  const checked=validateStoredRecords(data.records);
+  if(!checked.ok){storageState='corrupt';storageError='本地记录内容不完整或字段不合法，已暂停写入以避免覆盖。';records=[];return;}
+  storageState='ok';storageError='';records=checked.records;
+}
+function canWrite(){return storageState==='ok';}
+function isQuotaError(err){return Boolean(err&&(err.name==='QuotaExceededError'||err.name==='NS_ERROR_DOM_QUOTA_REACHED'||err.code===22||err.code===1014));}
+function saveRecords(nextRecords){
+  if(!canWrite())return {ok:false,message:storageError||'本地存储不可用，记录未保存。'};
+  let serialized;
+  try{serialized=JSON.stringify({version:STORAGE_VERSION,records:nextRecords});}
+  catch(_){return {ok:false,message:'记录序列化失败，未保存。'};}
+  try{window.localStorage.setItem(STORAGE_KEY,serialized);}
+  catch(err){
+    storageError=isQuotaError(err)?'本地存储空间不足，记录未保存。可删除部分演示记录后重试。':'本地存储写入失败，记录未保存。请检查浏览器隐私设置后重试。';
+    return {ok:false,message:storageError};
+  }
+  records=nextRecords.map(r=>({...r}));
+  storageError='';
+  return {ok:true};
+}
+function clearCorruptStorage(){
+  try{window.localStorage.removeItem(STORAGE_KEY);}
+  catch(_){storageError='无法清除本地记录。请检查浏览器隐私设置后重试。';clearConfirming=false;renderStorageBanner();return;}
+  records=[];storageState='ok';storageError='';clearConfirming=false;editingId=null;confirmDeleteId=null;detailError='';
+  renderAll();
+}
+
+function actionButton(label,action,recordId,className){
+  const btn=element('button',label,className||'outline');
+  btn.type='button';
+  btn.dataset.action=action;
+  if(recordId)btn.dataset.recordId=recordId;
+  return btn;
+}
+function showFeedback(target,message,ok){
+  if(!target)return;
+  target.textContent=message;
+  target.hidden=!message;
+  target.className=ok?'form-feedback ok':'form-feedback error';
+}
+function customerById(id){return CUSTOMERS.find(c=>c.id===id);}
+function recordById(id){return records.find(r=>r.id===id);}
+
+function renderList(){
+  const term=search.value.trim().toLowerCase();
+  const items=CUSTOMERS.filter(c=>(segment.value==='all'||c.segment===segment.value)&&(c.name.toLowerCase().includes(term)||c.id.includes(term)));
+  list.replaceChildren();
+  document.getElementById('count').textContent=`${items.length} / ${CUSTOMERS.length} 位客户`;
+  document.getElementById('empty').hidden=items.length>0;
+  for(const c of items){
+    const li=element('li');
+    const btn=element('button',undefined,'customer');
+    btn.type='button';
+    btn.dataset.customerId=c.id;
+    btn.setAttribute('aria-current',String(c.id===selectedId));
+    btn.setAttribute('aria-label',`查看${c.name}的详情`);
+    const row=element('span',undefined,'row');
+    row.append(element('strong',c.name),element('span',c.stage,'status'));
+    btn.append(row,element('div',`${c.id}　${c.segment}　${c.industry}`,'sub'));
+    btn.addEventListener('click',()=>{location.hash=`customer/${c.id}`;});
+    li.append(btn);
+    list.append(li);
+  }
+}
+
+function renderDetail(){
+  const c=customerById(selectedId);
+  const target=document.getElementById('detail');
+  target.replaceChildren();
+  if(!c){target.append(element('p','未找到该客户。'));return;}
+  const back=element('button','返回客户列表','outline mobile-back');
+  back.type='button';
+  back.addEventListener('click',()=>{location.hash='customers';});
+  const top=element('div',undefined,'detail-top');
+  top.append(element('span',c.name.slice(-1),'avatar'),element('h2',c.name),element('p',`${c.id} · ${c.segment}`,'muted'));
+  const facts=element('dl',undefined,'facts');
+  for(const [label,value] of [['服务阶段',c.stage],['所属行业',c.industry],['客户经理',c.owner],['数据性质','虚构演示数据']]){
+    const entry=element('div');
+    entry.append(element('dt',label),element('dd',value));
+    facts.append(entry);
+  }
+  const note=element('div',undefined,'note');
+  note.append(element('h3','服务背景'),element('p',c.summary),element('p',c.note,'muted'));
+  target.append(back,top,facts,note,buildFollowupPanel(c));
+}
+
+function buildFollowupPanel(c){
+  const panel=element('section',undefined,'followup');
+  panel.id='followup-panel';
+  panel.setAttribute('aria-labelledby','followup-title');
+  const title=element('h3','跟进事项');
+  title.id='followup-title';
+  panel.append(title);
+  if(detailError){
+    const error=element('p',detailError,'detail-error');
+    error.setAttribute('role','alert');
+    panel.append(error);
+  }
+  if(!canWrite()){
+    const notice=element('p',storageError||'本地存储不可用，暂时无法新增或修改记录。','storage-disabled');
+    notice.setAttribute('role','alert');
+    panel.append(notice);
+  }
+
+  const form=element('form',undefined,'followup-form');
+  form.id='followup-form';
+  form.noValidate=true;
+  const dateField=element('div',undefined,'form-field');
+  const dateLabel=element('label','跟进日期');
+  dateLabel.htmlFor='followup-date';
+  const dateInput=element('input');
+  dateInput.type='date';
+  dateInput.id='followup-date';
+  dateInput.name='followup-date';
+  dateInput.disabled=!canWrite();
+  dateField.append(dateLabel,dateInput);
+  const textField=element('div',undefined,'form-field');
+  const textLabel=element('label','跟进事项');
+  textLabel.htmlFor='followup-text';
+  const textInput=element('textarea');
+  textInput.id='followup-text';
+  textInput.name='followup-text';
+  textInput.placeholder='例如：确认门店收款流程时间';
+  textInput.disabled=!canWrite();
+  textField.append(textLabel,textInput);
+  const formActions=element('div',undefined,'form-actions');
+  const saveBtn=element('button','保存跟进','primary');
+  saveBtn.type='submit';
+  saveBtn.dataset.action='save-followup';
+  saveBtn.disabled=!canWrite();
+  const resetBtn=element('button','取消','outline');
+  resetBtn.type='button';
+  resetBtn.dataset.action='reset-followup';
+  resetBtn.disabled=!canWrite();
+  formActions.append(saveBtn,resetBtn);
+  const feedback=element('p',undefined,'form-feedback');
+  feedback.id='form-feedback';
+  feedback.setAttribute('role','alert');
+  feedback.hidden=true;
+  form.append(dateField,textField,formActions,feedback);
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    const date=dateInput.value||'';
+    const text=textInput.value||'';
+    const errors=validateInput(date,text);
+    if(errors.length){showFeedback(feedback,errors.join(' '),false);return;}
+    const result=addRecord(c.id,date,text);
+    if(!result.ok){showFeedback(feedback,result.message,false);renderWorkbench();return;}
+    detailError='';
+    renderAll();
+    const fresh=document.getElementById('form-feedback');
+    showFeedback(fresh,'已保存跟进事项。',true);
+    const first=document.getElementById('followup-date');
+    if(first&&typeof first.focus==='function')first.focus();
+  });
+  resetBtn.addEventListener('click',()=>{form.reset();showFeedback(feedback,'',true);if(typeof dateInput.focus==='function')dateInput.focus();});
+  panel.append(form);
+
+  panel.append(buildRecordGroup('未完成',records.filter(r=>r.customerId===c.id&&r.status==='open'),'open-list','这位客户还没有跟进事项。',true));
+  panel.append(buildRecordGroup('已完成',records.filter(r=>r.customerId===c.id&&r.status==='done'),'done-list','暂无已完成记录。',false));
+  return panel;
+}
+
+function buildRecordGroup(title,items,listId,emptyText,isOpen){
+  const group=element('div',undefined,'followup-group');
+  group.append(element('h4',title));
+  const recordList=element('ul');
+  recordList.id=listId;
+  recordList.dataset.status=isOpen?'open':'done';
+  const sorted=items.slice().sort(compareRecords);
+  if(sorted.length===0){
+    recordList.append(element('li',emptyText,'record-empty'));
+  }else{
+    for(const record of sorted)recordList.append(detailRecordRow(record));
+  }
+  group.append(recordList);
+  return group;
+}
+
+function detailRecordRow(r){
+  const li=element('li',undefined,'record');
+  li.dataset.recordId=r.id;
+  if(editingId===r.id){
+    li.append(buildEditForm(r));
+    return li;
+  }
+  const head=element('div',undefined,'record-head');
+  head.append(element('p',r.text,'record-text'));
+  const tags=element('div',undefined,'record-tags');
+  if(r.status==='done')tags.append(element('span','已完成','tag tag-done'));
+  else tags.append(element('span','未完成','tag'));
+  head.append(tags);
+  li.append(head);
+  li.append(element('p',`日期 ${r.date}`,'record-meta'));
+
+  if(confirmDeleteId===r.id){
+    const warning=element('p','确认删除该记录？此操作不可撤销。','delete-warning');
+    const rowError=element('p',undefined,'form-feedback');
+    rowError.setAttribute('role','alert');
+    rowError.hidden=true;
+    const actions=element('div',undefined,'record-actions');
+    const confirmBtn=actionButton('确认删除','confirm-delete',r.id,'danger');
+    confirmBtn.disabled=!canWrite();
+    confirmBtn.addEventListener('click',()=>{
+      const result=deleteRecord(r.id);
+      if(!result.ok){showFeedback(rowError,result.message,false);renderWorkbench();}
+    });
+    const cancelBtn=actionButton('取消','cancel-delete',r.id);
+    cancelBtn.addEventListener('click',()=>{confirmDeleteId=null;renderDetail();});
+    actions.append(confirmBtn,cancelBtn);
+    li.append(warning,actions,rowError);
+    return li;
+  }
+
+  const actions=element('div',undefined,'record-actions');
+  if(r.status==='open'){
+    const doneBtn=actionButton('完成','complete',r.id);
+    doneBtn.disabled=!canWrite();
+    doneBtn.addEventListener('click',()=>{const result=setStatus(r.id,'done');if(!result.ok){detailError=result.message;renderAll();}});
+    actions.append(doneBtn);
+  }else{
+    const undoBtn=actionButton('撤销完成','undo',r.id);
+    undoBtn.disabled=!canWrite();
+    undoBtn.addEventListener('click',()=>{const result=setStatus(r.id,'open');if(!result.ok){detailError=result.message;renderAll();}});
+    actions.append(undoBtn);
+  }
+  const editBtn=actionButton('编辑','edit',r.id);
+  editBtn.disabled=!canWrite();
+  editBtn.addEventListener('click',()=>{editingId=r.id;confirmDeleteId=null;renderDetail();});
+  const deleteBtn=actionButton('删除','delete',r.id);
+  deleteBtn.disabled=!canWrite();
+  deleteBtn.addEventListener('click',()=>{confirmDeleteId=r.id;editingId=null;renderDetail();});
+  actions.append(editBtn,deleteBtn);
+  li.append(actions);
+  return li;
+}
+
+function buildEditForm(r){
+  const form=element('form',undefined,'edit-form');
+  form.dataset.recordId=r.id;
+  form.noValidate=true;
+  const dateField=element('div',undefined,'form-field');
+  const dateLabel=element('label','跟进日期');
+  dateLabel.htmlFor=`edit-date-${r.id}`;
+  const dateInput=element('input');
+  dateInput.type='date';
+  dateInput.id=`edit-date-${r.id}`;
+  dateInput.value=r.date;
+  dateInput.disabled=!canWrite();
+  dateField.append(dateLabel,dateInput);
+  const textField=element('div',undefined,'form-field');
+  const textLabel=element('label','跟进事项');
+  textLabel.htmlFor=`edit-text-${r.id}`;
+  const textInput=element('textarea');
+  textInput.id=`edit-text-${r.id}`;
+  textInput.value=r.text;
+  textInput.disabled=!canWrite();
+  textField.append(textLabel,textInput);
+  const feedback=element('p',undefined,'form-feedback');
+  feedback.setAttribute('role','alert');
+  feedback.hidden=true;
+  const actions=element('div',undefined,'form-actions');
+  const saveBtn=element('button','保存修改','primary');
+  saveBtn.type='submit';
+  saveBtn.dataset.action='save-edit';
+  saveBtn.dataset.recordId=r.id;
+  saveBtn.disabled=!canWrite();
+  const cancelBtn=actionButton('取消编辑','cancel-edit',r.id);
+  actions.append(saveBtn,cancelBtn);
+  form.append(dateField,textField,feedback,actions);
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    const date=dateInput.value||'';
+    const text=textInput.value||'';
+    const errors=validateInput(date,text);
+    if(errors.length){showFeedback(feedback,errors.join(' '),false);return;}
+    const result=updateRecord(r.id,date,text);
+    if(!result.ok){showFeedback(feedback,result.message,false);renderWorkbench();}
+  });
+  cancelBtn.addEventListener('click',()=>{editingId=null;renderDetail();});
+  return form;
+}
+
+function addRecord(customerId,date,text){
+  if(!CUSTOMER_IDS.has(customerId))return {ok:false,message:'未找到该客户，记录未保存。'};
+  const record={id:makeId(),customerId,date,text:normalizeText(text),status:'open',createdAt:Date.now()};
+  return saveRecords(records.concat(record));
+}
+function updateRecord(id,date,text){
+  const current=recordById(id);
+  if(!current)return {ok:false,message:'记录不存在，修改未保存。'};
+  const next=records.map(r=>r.id===id?{...r,date,text:normalizeText(text)}:r);
+  const result=saveRecords(next);
+  if(result.ok){editingId=null;detailError='';renderAll();}
+  return result;
+}
+function setStatus(id,status){
+  const current=recordById(id);
+  if(!current)return {ok:false,message:'记录不存在，操作未保存。'};
+  const next=records.map(r=>r.id===id?{...r,status}:r);
+  const result=saveRecords(next);
+  if(result.ok){detailError='';renderAll();}
+  return result;
+}
+function deleteRecord(id){
+  const next=records.filter(r=>r.id!==id);
+  const result=saveRecords(next);
+  if(result.ok){confirmDeleteId=null;editingId=null;detailError='';renderAll();}
+  return result;
+}
+
+function workbenchRecord(r,today,kind){
+  const li=element('li',undefined,'record');
+  const customer=customerById(r.customerId);
+  const head=element('div',undefined,'record-head');
+  head.append(element('p',r.text,'record-text'));
+  const tags=element('div',undefined,'record-tags');
+  if(kind==='overdue'){
+    tags.append(element('span','已逾期','tag tag-overdue'),element('span',`逾期 ${daysBetween(r.date,today)} 天`,'muted'));
+  }else{
+    tags.append(element('span','今日','tag'));
+  }
+  head.append(tags);
+  li.append(head);
+  const meta=element('p',undefined,'record-meta');
+  meta.append(element('strong',customer?customer.name:'未知客户'),element('span',` · ${r.date}`));
+  li.append(meta);
+  const actions=element('div',undefined,'record-actions');
+  const doneBtn=actionButton('完成','complete',r.id);
+  doneBtn.disabled=!canWrite();
+  doneBtn.addEventListener('click',()=>{const result=setStatus(r.id,'done');if(!result.ok){detailError=result.message;renderAll();}});
+  const viewBtn=actionButton('查看客户','view-customer',r.id);
+  viewBtn.addEventListener('click',()=>{const target=`#customer/${r.customerId}`;if(location.hash===target){selectedId=r.customerId;renderAll();}else{location.hash=`customer/${r.customerId}`;}});
+  actions.append(doneBtn,viewBtn);
+  li.append(actions);
+  return li;
+}
+
+function renderBucket(listId,countId,items,today,kind){
+  const target=document.getElementById(listId);
+  target.replaceChildren();
+  document.getElementById(countId).textContent=`${items.length} 项`;
+  if(items.length===0){
+    target.append(element('li',kind==='overdue'?'没有已逾期事项。':'今天没有待跟进事项。','record-empty'));
+    return;
+  }
+  for(const record of items)target.append(workbenchRecord(record,today,kind));
+}
+
+function renderStorageBanner(){
+  const banner=document.getElementById('storage-banner');
+  banner.replaceChildren();
+  if(storageState==='ok'&&!storageError){banner.hidden=true;return;}
+  banner.hidden=false;
+  banner.append(element('p',storageError||'本地存储异常，记录未保存。'));
+  if(storageState==='corrupt'||storageState==='version'){
+    if(clearConfirming){
+      banner.append(element('p','确认清除浏览器中损坏的本地记录？清除后无法恢复。','muted'));
+      const actions=element('div',undefined,'form-actions');
+      const confirm=actionButton('确认清除','confirm-clear-storage',null,'danger');
+      confirm.addEventListener('click',clearCorruptStorage);
+      const cancel=actionButton('取消','cancel-clear-storage',null,'outline');
+      cancel.addEventListener('click',()=>{clearConfirming=false;renderStorageBanner();});
+      actions.append(confirm,cancel);
+      banner.append(actions);
+    }else{
+      const clear=actionButton('清除损坏数据并重新开始','clear-storage',null,'danger');
+      clear.addEventListener('click',()=>{clearConfirming=true;renderStorageBanner();});
+      banner.append(clear);
+    }
+  }
+}
+
+function renderWorkbench(){
+  const today=todayISO();
+  document.getElementById('today-date').textContent=today;
+  const open=records.filter(r=>r.status==='open').sort(compareRecords);
+  const overdue=open.filter(r=>classifyDate(r.date,today)==='overdue');
+  const todayItems=open.filter(r=>classifyDate(r.date,today)==='today');
+  renderBucket('overdue-list','overdue-count',overdue,today,'overdue');
+  renderBucket('today-list','today-count',todayItems,today,'today');
+  renderStorageBanner();
+}
+
+function renderAll(){renderList();renderDetail();renderWorkbench();}
+function route(){
+  const match=location.hash.match(/^#customer\/(demo-\d{3})$/);
+  const exists=match&&CUSTOMER_IDS.has(match[1]);
+  if(exists)selectedId=match[1];
+  document.getElementById('layout').dataset.detail=String(Boolean(exists));
+  renderAll();
+}
+
+search.addEventListener('input',renderList);
+segment.addEventListener('change',renderList);
+document.getElementById('reset').addEventListener('click',()=>{search.value='';segment.value='all';renderList();search.focus();});
+window.addEventListener('hashchange',route);
+loadStorage();
+route();
 </script>
 </body>
 </html>

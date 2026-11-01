@@ -18,9 +18,14 @@ test('基线：六个虚构客户编号唯一，两个客户类型存在', () =>
   assert.match(scripts[0], /企业客户/);
   assert.match(scripts[0], /个人客户/);
 });
-test('基线：不包含跟进提醒实现与存储写入', () => {
-  assert.doesNotMatch(scripts[0], /localStorage|indexedDB|fetch\(|XMLHttpRequest/);
-  assert.doesNotMatch(scripts[0], /添加跟进|完成跟进|今日待跟进|已逾期/);
+test('基线：客户数据、搜索筛选、详情路由与无网络请求约束保留', () => {
+  assert.match(scripts[0], /const CUSTOMERS=Object\.freeze/);
+  assert.match(scripts[0], /document\.getElementById\('search'\)/);
+  assert.match(scripts[0], /document\.getElementById\('segment'\)/);
+  assert.match(scripts[0], /function renderList\(\)/);
+  assert.match(scripts[0], /function renderDetail\(\)/);
+  assert.match(scripts[0], /customer\\\/\(demo-/);
+  assert.doesNotMatch(scripts[0], /fetch\(|XMLHttpRequest/);
 });
 test('渲染：动态文本使用 textContent，避免注入 HTML', () => {
   assert.doesNotMatch(scripts[0], /innerHTML|outerHTML|insertAdjacentHTML|eval\(/);
